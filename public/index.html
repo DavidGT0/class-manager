@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ניהול הכיתה</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main>
+    <h1>ניהול הכיתה</h1>
+
+    <form id="student-form" autocomplete="off">
+      <h2 id="form-title">הוספת סטודנט</h2>
+      <input type="hidden" id="student-id" />
+      <label>
+        שם סטודנט
+        <input id="name" required maxlength="100" placeholder="לדוגמה: ישראל ישראלי" />
+      </label>
+      <label>
+        מקצוע
+        <input id="major" required maxlength="100" placeholder="לדוגמה: הנדסת תוכנה" />
+      </label>
+      <div class="actions">
+        <button type="submit" id="submit-btn">הוספה</button>
+        <button type="button" id="cancel-btn" class="secondary" hidden>ביטול</button>
+      </div>
+      <p id="message" role="status"></p>
+    </form>
+
+    <section>
+      <div class="list-header">
+        <h2>רשימת סטודנטים (<span id="count">0</span>)</h2>
+        <input id="search" type="search" placeholder="חיפוש לפי שם או מקצוע" />
+      </div>
+      <table>
+        <thead>
+          <tr><th>שם</th><th>מקצוע</th><th></th></tr>
+        </thead>
+        <tbody id="students"></tbody>
+      </table>
+      <p id="empty" hidden>אין עדיין סטודנטים בכיתה.</p>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+  background: #f4f6fa;
+  color: #1f2937;
+}
+main { max-width: 760px; margin: 40px auto; padding: 0 16px; }
+h1 { margin-bottom: 24px; }
+h2 { font-size: 1.15rem; margin: 0 0 12px; }
+
+form, section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+}
+label { display: block; margin-bottom: 12px; font-weight: 600; }
+input {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 9px 10px;
+  font: inherit;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+input:focus { outline: 2px solid #2563eb; border-color: transparent; }
+
+button {
+  font: inherit;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+}
+button:disabled { opacity: .6; cursor: default; }
+button.secondary { background: #e2e8f0; color: #1f2937; }
+button.danger { background: #dc2626; }
+.actions { display: flex; gap: 8px; }
+
+#message { min-height: 1.2em; margin: 12px 0 0; }
+#message.error { color: #dc2626; }
+#message.success { color: #16a34a; }
+
+.list-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.list-header input { width: 220px; margin: 0 0 12px; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: right; padding: 10px 8px; border-bottom: 1px solid #e5e7eb; }
+th { color: #64748b; font-weight: 600; }
+.row-actions { display: flex; gap: 6px; justify-content: flex-end; }
+.row-actions button { padding: 5px 10px; font-size: .9rem; }
+#empty { color: #64748b; text-align: center; }
